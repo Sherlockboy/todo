@@ -29,7 +29,8 @@ export default {
             })
             .then(response => {
                 if(response.status == 200){
-                    this.item.title = "";
+                    this.task.title = "";
+                    this.$emit('reloadlist');
                 }
             })
             .catch(error => {

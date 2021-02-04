@@ -87,9 +87,9 @@ class TaskController extends Controller
             $task->save();
 
             return $task;
+        }else{
+            return response()->json('Task not found!', 404);
         }
-
-        return response()->json('Task not found!', 404);
     }
 
     /**
